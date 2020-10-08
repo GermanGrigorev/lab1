@@ -1,0 +1,9 @@
+.WeatherDetails{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  &-Item {
+    background-color: cadetblue;
+
+  }
+}
