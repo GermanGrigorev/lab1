@@ -1,9 +1,53 @@
+$breakpoint: 992px;
+
+.Header {
+  display: flex;
+  &-Title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-right: 80px;
+  }
+}
+.ChangeLocationButton {
+  border-radius: 5px;
+  color:cadetblue;
+  background-color: #c0e6e4;
+  padding: 8px 30px;
+}
+
+.Current {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &-Title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  &-Temperature {
+    font-size: 70px;
+    font-weight: 500;
+  }
+  &-WeatherIcon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
 .WeatherDetails{
   color: white;
   display: flex;
   flex-direction: column;
   &-Item {
     background-color: cadetblue;
-
+    padding: 7px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &-ItemTitle {
+    font-weight: 400;
+    margin-right: 20px;
   }
 }
