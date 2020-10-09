@@ -1,7 +1,14 @@
-$breakpoint: 992px;
+$breakpoint: 700px;
+
+.Container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 .Header {
   display: flex;
+  padding-top: 20px;
   &-Title {
     font-size: 24px;
     line-height: 30px;
@@ -14,12 +21,27 @@ $breakpoint: 992px;
   color:cadetblue;
   background-color: #c0e6e4;
   padding: 8px 30px;
+  &_mobile {
+    display: none;
+    background-color: #c0e6e4;
+    background-image: url("two-circular-arrows.png");
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: $breakpoint) {
+  .ChangeLocationButton {
+    display: none;
+    &_mobile {
+      display: block;
+    }
+  }
 }
 
 .Current {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   &-Title {
     font-weight: 700;
     font-size: 28px;
@@ -32,6 +54,15 @@ $breakpoint: 992px;
   &-WeatherIcon {
     width: 70px;
     height: 70px;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .Current {
+    flex-direction: column;
+    &-MainInfo {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -50,4 +81,79 @@ $breakpoint: 992px;
     font-weight: 400;
     margin-right: 20px;
   }
+}
+
+.Selected {
+  &-Header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  &-Title {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+  }
+  &-List {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .Selected {
+    &-List {
+      flex-direction: column;
+    }
+  }
+}
+
+.AddNewCity {
+  &-Input {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 200px;
+    height: 28px;
+    border: 2px solid cadetblue;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+}
+
+.CityWeather {
+  margin-bottom: 20px;
+  &-Header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  &-HeaderInfo {
+    display: flex;
+  }
+  &-Title {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+  &-Temperature {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  &-WeatherIcon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.IconButton {
+  border-radius: 100%;
+  background-color: cadetblue;
+  width: 25px;
+  height: 25px;
+  color: white;
+  font-size: 20px;
 }

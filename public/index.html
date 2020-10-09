@@ -1,90 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <meta
       name="description"
       content="Web site created using create-react-app"
-    />
-    <title>Lab 1</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <header class="Header">
-      <h1 class="Header-Title">Погода здесь</h1>
-      <button class="ChangeLocationButton">Обновить геолокацию</button>
-    </header>
-    <main>
-      <section class="Current">
-        <div class="Current-MainInfo">
-          <h2 class="Current-Title">Saint Petersburg</h2>
-          <img src='./moon.png' class="Current-WeatherIcon"/>
-          <span class="Current-Temperature">8°C</span>
-        </div>
-        <ul class="Current-Details WeatherDetails">
-          <li class="WeatherDetails-Item">
-            <span class="WeatherDetails-ItemTitle">Ветер</span>
-            <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
-          </li>
-          <li class="WeatherDetails-Item">
-            <span class="WeatherDetails-ItemTitle">Облачность</span>
-            <span class="WeatherDetails-ItemValue">Broken clouds</span>
-          </li>
-          <li class="WeatherDetails-Item">
-            <span class="WeatherDetails-ItemTitle">Давление</span>
-            <span class="WeatherDetails-ItemValue">1013 hpa</span>
-          </li>
-          <li class="WeatherDetails-Item">
-            <span class="WeatherDetails-ItemTitle">Влажность</span>
-            <span class="WeatherDetails-ItemValue">52 %</span>
-          </li>
-          <li class="WeatherDetails-Item">
-            <span class="WeatherDetails-ItemTitle">Координаты</span>
-            <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
-          </li>
-        </ul>
-      </section>
-      <section class="Selected">
+  />
+  <title>Lab 1</title>
+</head>
+<body>
+<header>
+  <div class="Container Header">
+    <h1 class="Header-Title">Погода здесь</h1>
+    <button class="ChangeLocationButton">Обновить геолокацию</button>
+    <button class="ChangeLocationButton_mobile"></button>
+  </div>
+</header>
+<main>
+  <div class="Container">
+    <section class="Current">
+      <div class="Current-MainInfo">
+        <h2 class="Current-Title">Saint Petersburg</h2>
+        <img src='./moon.png' class="Current-WeatherIcon"/>
+        <span class="Current-Temperature">8°C</span>
+      </div>
+      <ul class="Current-Details WeatherDetails">
+        <li class="WeatherDetails-Item">
+          <span class="WeatherDetails-ItemTitle">Ветер</span>
+          <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+        </li>
+        <li class="WeatherDetails-Item">
+          <span class="WeatherDetails-ItemTitle">Облачность</span>
+          <span class="WeatherDetails-ItemValue">Broken clouds</span>
+        </li>
+        <li class="WeatherDetails-Item">
+          <span class="WeatherDetails-ItemTitle">Давление</span>
+          <span class="WeatherDetails-ItemValue">1013 hpa</span>
+        </li>
+        <li class="WeatherDetails-Item">
+          <span class="WeatherDetails-ItemTitle">Влажность</span>
+          <span class="WeatherDetails-ItemValue">52 %</span>
+        </li>
+        <li class="WeatherDetails-Item">
+          <span class="WeatherDetails-ItemTitle">Координаты</span>
+          <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+        </li>
+      </ul>
+    </section>
+    <section class="Selected">
+      <div class="Selected-Header">
         <h2 class="Selected-Title">Избранное</h2>
         <div class="AddNewCity">
-          <input class="AddNewCity-Input"/>
-          <button class="AddNewCity-Button"/>
+          <input placeholder="Добавить новый город" class="AddNewCity-Input"/>
+          <button class="IconButton">+</button>
         </div>
-        <ul class="Selected-List">
-          <li class="CityWeather">
-            <div class="CityWeather-Header">
+      </div>
+      <ul class="Selected-List">
+        <li class="CityWeather Selected-ListItem">
+          <div class="CityWeather-Header">
+            <div class="CityWeather-HeaderInfo">
               <h3 class="CityWeather-Title">Moscow</h3>
               <span class="CityWeather-Temperature">5°C</span>
-              <img class="CityWeather-WeatherIcon"/>
-              <button class="CityWeather-Delete"/>
+              <img src='./moon.png' class="CityWeather-WeatherIcon"/>
             </div>
-            <ul class="CityWeather-Details WeatherDetails">
-              <li class="WeatherDetails-Item">
-                <span class="WeatherDetails-ItemTitle">Ветер</span>
-                <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
-              </li>
-              <li class="WeatherDetails-Item">
-                <span class="WeatherDetails-ItemTitle">Облачность</span>
-                <span class="WeatherDetails-ItemValue">Broken clouds</span>
-              </li>
-              <li class="WeatherDetails-Item">
-                <span class="WeatherDetails-ItemTitle">Давление</span>
-                <span class="WeatherDetails-ItemValue">1013 hpa</span>
-              </li>
-              <li class="WeatherDetails-Item">
-                <span class="WeatherDetails-ItemTitle">Влажность</span>
-                <span class="WeatherDetails-ItemValue">52 %</span>
-              </li>
-              <li class="WeatherDetails-Item">
-                <span class="WeatherDetails-ItemTitle">Координаты</span>
-                <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-    </main>
-  </body>
+            <button class="IconButton">×</button>
+          </div>
+          <ul class="CityWeather-Details WeatherDetails">
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Ветер</span>
+              <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Облачность</span>
+              <span class="WeatherDetails-ItemValue">Broken clouds</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Давление</span>
+              <span class="WeatherDetails-ItemValue">1013 hpa</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Влажность</span>
+              <span class="WeatherDetails-ItemValue">52 %</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Координаты</span>
+              <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+            </li>
+          </ul>
+        </li>
+        <li class="CityWeather Selected-ListItem">
+          <div class="CityWeather-Header">
+            <div class="CityWeather-HeaderInfo">
+              <h3 class="CityWeather-Title">Moscow</h3>
+              <span class="CityWeather-Temperature">5°C</span>
+              <img src='./moon.png' class="CityWeather-WeatherIcon"/>
+            </div>
+            <button class="IconButton">×</button>
+          </div>
+          <ul class="CityWeather-Details WeatherDetails">
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Ветер</span>
+              <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Облачность</span>
+              <span class="WeatherDetails-ItemValue">Broken clouds</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Давление</span>
+              <span class="WeatherDetails-ItemValue">1013 hpa</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Влажность</span>
+              <span class="WeatherDetails-ItemValue">52 %</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Координаты</span>
+              <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+            </li>
+          </ul>
+        </li>
+        <li class="CityWeather Selected-ListItem">
+          <div class="CityWeather-Header">
+            <div class="CityWeather-HeaderInfo">
+              <h3 class="CityWeather-Title">Moscow</h3>
+              <span class="CityWeather-Temperature">5°C</span>
+              <img src='./moon.png' class="CityWeather-WeatherIcon"/>
+            </div>
+            <button class="IconButton">×</button>
+          </div>
+          <ul class="CityWeather-Details WeatherDetails">
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Ветер</span>
+              <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Облачность</span>
+              <span class="WeatherDetails-ItemValue">Broken clouds</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Давление</span>
+              <span class="WeatherDetails-ItemValue">1013 hpa</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Влажность</span>
+              <span class="WeatherDetails-ItemValue">52 %</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Координаты</span>
+              <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+            </li>
+          </ul>
+        </li>
+        <li class="CityWeather Selected-ListItem">
+          <div class="CityWeather-Header">
+            <div class="CityWeather-HeaderInfo">
+              <h3 class="CityWeather-Title">Moscow</h3>
+              <span class="CityWeather-Temperature">5°C</span>
+              <img src='./moon.png' class="CityWeather-WeatherIcon"/>
+            </div>
+            <button class="IconButton">×</button>
+          </div>
+          <ul class="CityWeather-Details WeatherDetails">
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Ветер</span>
+              <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Облачность</span>
+              <span class="WeatherDetails-ItemValue">Broken clouds</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Давление</span>
+              <span class="WeatherDetails-ItemValue">1013 hpa</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Влажность</span>
+              <span class="WeatherDetails-ItemValue">52 %</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Координаты</span>
+              <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+            </li>
+          </ul>
+        </li>
+        <li class="CityWeather Selected-ListItem">
+          <div class="CityWeather-Header">
+            <div class="CityWeather-HeaderInfo">
+              <h3 class="CityWeather-Title">Moscow</h3>
+              <span class="CityWeather-Temperature">5°C</span>
+              <img src='./moon.png' class="CityWeather-WeatherIcon"/>
+            </div>
+            <button class="IconButton">×</button>
+          </div>
+          <ul class="CityWeather-Details WeatherDetails">
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Ветер</span>
+              <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Облачность</span>
+              <span class="WeatherDetails-ItemValue">Broken clouds</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Давление</span>
+              <span class="WeatherDetails-ItemValue">1013 hpa</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Влажность</span>
+              <span class="WeatherDetails-ItemValue">52 %</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Координаты</span>
+              <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+            </li>
+          </ul>
+        </li>
+        <li class="CityWeather Selected-ListItem">
+          <div class="CityWeather-Header">
+            <div class="CityWeather-HeaderInfo">
+              <h3 class="CityWeather-Title">Moscow</h3>
+              <span class="CityWeather-Temperature">5°C</span>
+              <img src='./moon.png' class="CityWeather-WeatherIcon"/>
+            </div>
+            <button class="IconButton">×</button>
+          </div>
+          <ul class="CityWeather-Details WeatherDetails">
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Ветер</span>
+              <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Облачность</span>
+              <span class="WeatherDetails-ItemValue">Broken clouds</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Давление</span>
+              <span class="WeatherDetails-ItemValue">1013 hpa</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Влажность</span>
+              <span class="WeatherDetails-ItemValue">52 %</span>
+            </li>
+            <li class="WeatherDetails-Item">
+              <span class="WeatherDetails-ItemTitle">Координаты</span>
+              <span class="WeatherDetails-ItemValue">[59.88, 30.42]</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
+</main>
+</body>
 </html>
