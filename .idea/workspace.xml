@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c12a5b41-ccb7-447e-b9aa-2218fb837e3c" name="Default Changelist" comment="Add all except one button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +51,18 @@
       <recent name="D:\web_labs\lab1_react\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.deploy">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="npm start" type="js.build_tools.npm">
@@ -64,6 +75,11 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.deploy" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -142,22 +158,6 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="273" y="114" key="EditFileWatcherDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602337934769" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.bottom" timestamp="1602338072254">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072254" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.center" timestamp="1602338072253">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072253" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.left" timestamp="1602338072253">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072253" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.right" timestamp="1602338072253">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072253" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1602338775727">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -166,5 +166,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282208970" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1602343600815">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602343600815" />
   </component>
 </project>
