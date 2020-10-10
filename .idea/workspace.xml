@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c12a5b41-ccb7-447e-b9aa-2218fb837e3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/moon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/two-circular-arrows.png" afterDir="false" />
+    <list default="true" id="c12a5b41-ccb7-447e-b9aa-2218fb837e3c" name="Default Changelist" comment="Add all except one button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +39,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web_labs\lab1_react\src\images" />
+      <recent name="D:\web_labs\lab1_react\src" />
+      <recent name="D:\web_labs\lab1_react\public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\web_labs\lab1_react\src" />
       <recent name="D:\web_labs\lab1_react\public" />
       <recent name="D:\web_labs\lab1_react\assets" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\web_labs\lab1_react\src" />
-      <recent name="D:\web_labs\lab1_react\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -81,7 +76,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602190440760</updated>
       <workItem from="1602190442692" duration="5330000" />
-      <workItem from="1602275975916" duration="5692000" />
+      <workItem from="1602275975916" duration="5758000" />
+      <workItem from="1602337667373" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1602191406471</created>
@@ -97,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602197148857</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add all except one button">
+      <created>1602282204336</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602282204336</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,40 +122,49 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="Remove react" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove react" />
+    <MESSAGE value="Add all except one button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add all except one button" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602194091209">
+    <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602339297458">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602194091209" />
-    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1602282180947">
+    <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602339297458" />
+    <state x="258" y="0" key="CommitChangelistDialog2" timestamp="1602339590716">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282180947" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.bottom" timestamp="1602282180973">
+    <state x="258" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602339590716" />
+    <state x="122" y="56" key="DiffContextDialog" timestamp="1602339589492">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282180973" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.center" timestamp="1602282180973">
+    <state x="122" y="56" key="DiffContextDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602339589492" />
+    <state x="273" y="114" key="EditFileWatcherDialog" timestamp="1602337934769">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282180973" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.left" timestamp="1602282180973">
+    <state x="273" y="114" key="EditFileWatcherDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602337934769" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.bottom" timestamp="1602338072254">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282180973" />
-    <state width="1237" height="-12" key="GridCell.Tab.0.right" timestamp="1602282180973">
+    <state width="1237" height="-12" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072254" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.center" timestamp="1602338072253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-12" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282180973" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1602279431937">
+    <state width="1237" height="-12" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072253" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.left" timestamp="1602338072253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602279431937" />
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1602197155807">
+    <state width="1237" height="-12" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072253" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.right" timestamp="1602338072253">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602197155807" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338072253" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1602338775727">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338775727" />
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1602282208970">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602282208970" />
   </component>
 </project>
