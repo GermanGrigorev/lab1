@@ -149,6 +149,7 @@ $breakpoint: 700px;
   &-Header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 5px;
   }
   &-HeaderInfo {
@@ -169,6 +170,14 @@ $breakpoint: 700px;
   &-WeatherIcon {
     width: 25px;
     height: 25px;
+  }
+}
+
+@media (max-width: $breakpoint) {
+  .CityWeather{
+    &-Header {
+      margin-bottom: 15px;
+    }
   }
 }
 
