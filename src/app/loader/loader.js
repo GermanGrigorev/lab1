@@ -1,8 +1,16 @@
+let LOADER_COUNT = 0;
+
 export const setIsLoading = (flag) => {
   const loader = document.getElementById('loader');
   if (flag) {
-    loader.classList.remove('Loader__hidden');
+    LOADER_COUNT++;
   } else {
+    LOADER_COUNT = LOADER_COUNT && LOADER_COUNT - 1;
+  }
+  if (LOADER_COUNT === 0) {
     loader.classList.add('Loader__hidden');
+  }
+  if (LOADER_COUNT === 1) {
+    loader.classList.remove('Loader__hidden');
   }
 };

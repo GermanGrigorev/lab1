@@ -28,12 +28,16 @@
     <section class="Selected">
       <div class="Selected-Header">
         <h2 class="Selected-Title">Избранное</h2>
-        <div class="AddNewCity">
-          <input placeholder="Добавить новый город" class="AddNewCity-Input"/>
-          <button class="IconButton">+</button>
-        </div>
+        <form class="AddNewCity" id="addNewCityForm">
+          <input
+              type="text"
+              placeholder="Добавить новый город"
+              class="AddNewCity-Input"
+          >
+          <input type="submit" class="IconButton" value="+">
+        </form>
       </div>
-      <ul class="Selected-List">
+      <ul class="Selected-List" id="SelectedList">
         <li class="SavedCity Selected-ListItem">
           <div class="SavedCity-Header">
             <div class="SavedCity-HeaderInfo">
@@ -71,51 +75,51 @@
   </div>
 </main>
 
-<template id="weatherDetailsTemplate">
-  <ul class="WeatherDetails" id="weatherDetails">
+<template id="WeatherDetailsTemplate">
+  <ul class="WeatherDetails">
     <li class="WeatherDetails-Item">
       <span class="WeatherDetails-ItemTitle">Ветер</span>
-      <span class="WeatherDetails-ItemValue" id="weatherDetailsTemplate-wind"></span>
+      <span class="WeatherDetails-ItemValue WeatherDetailsTemplate-Wind"></span>
     </li>
     <li class="WeatherDetails-Item">
       <span class="WeatherDetails-ItemTitle">Облачность</span>
-      <span class="WeatherDetails-ItemValue" id="weatherDetailsTemplate-clouds"></span>
+      <span class="WeatherDetails-ItemValue WeatherDetailsTemplate-Clouds"></span>
     </li>
     <li class="WeatherDetails-Item">
       <span class="WeatherDetails-ItemTitle">Давление</span>
-      <span class="WeatherDetails-ItemValue" id="weatherDetailsTemplate-pressure"></span>
+      <span class="WeatherDetails-ItemValue WeatherDetailsTemplate-Pressure"></span>
     </li>
     <li class="WeatherDetails-Item">
       <span class="WeatherDetails-ItemTitle">Влажность</span>
-      <span class="WeatherDetails-ItemValue" id="weatherDetailsTemplate-humidity"></span>
+      <span class="WeatherDetails-ItemValue WeatherDetailsTemplate-Humidity"></span>
     </li>
     <li class="WeatherDetails-Item">
       <span class="WeatherDetails-ItemTitle">Координаты</span>
-      <span class="WeatherDetails-ItemValue" id="weatherDetailsTemplate-coordinates"></span>
+      <span class="WeatherDetails-ItemValue WeatherDetailsTemplate-Coordinates"></span>
     </li>
   </ul>
 </template>
-<template id="currentTemplate">
-  <section class="Current" id="current">
+<template id="CurrentTemplate">
+  <section class="Current" >
     <div class="Current-MainInfo">
-      <h2 id="currentTitle" class="Current-Title"></h2>
+      <h2 class="Current-Title"></h2>
       <div>
-        <img id="currentWeatherIcon" alt="" src="" class="Current-WeatherIcon"/>
-        <span id="currentTemperature" class="Current-Temperature"></span>
+        <img alt="" src="" class="Current-WeatherIcon"/>
+        <span class="Current-Temperature"></span>
       </div>
     </div>
     <!--      <ul class="Current-Details WeatherDetails">-->
   </section>
 </template>
-<template id="savedCityTemplate">
-  <li class="SavedCity Selected-ListItem" id="savedCity">
+<template id="SavedCityTemplate">
+  <li class="SavedCity Selected-ListItem">
     <div class="SavedCity-Header">
       <div class="SavedCity-HeaderInfo">
-        <h3 id="savedCityTitle" class="SavedCity-Title"></h3>
-        <span id="savedCityTemperature" class="SavedCity-Temperature"></span>
-        <img id="savedCityWeatherIcon" alt="" src="" class="SavedCity-WeatherIcon"/>
+        <h3 class="SavedCity-Title"></h3>
+        <span class="SavedCity-Temperature"></span>
+        <img alt="" src="" class="SavedCity-WeatherIcon"/>
       </div>
-      <button class="IconButton">×</button>
+      <button class="IconButton SavedCity-Button">×</button>
     </div>
     <!--weather details-->
   </li>

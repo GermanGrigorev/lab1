@@ -1,5 +1,3 @@
-export const DEFAULT_CITY = 'Venice';
-
 export const CityTypes = {
   current: 'current',
   saved: 'saved',

@@ -70,6 +70,7 @@ $breakpoint: 700px;
   color: white;
   display: flex;
   flex-direction: column;
+  min-width: 310px;
   &-Item {
     background-color: cadetblue;
     padding: 7px;
@@ -185,6 +186,7 @@ $breakpoint: 700px;
   min-height: 25px;
   color: white;
   font-size: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: $breakpoint) {
