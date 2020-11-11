@@ -2,6 +2,8 @@ import { renderCurrentWeather } from './renderCurrentWeather/renderCurrentWeathe
 
 const app = async () => {
   await renderCurrentWeather();
+  const button = document.getElementById('changeLocationButton');
+  button.addEventListener('click', renderCurrentWeather);
 };
 
 window.addEventListener('load', app);

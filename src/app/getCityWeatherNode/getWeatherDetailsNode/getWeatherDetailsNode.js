@@ -1,11 +1,13 @@
 
-export const getWeatherDetailsTag = (weather) => {
-  const template = document.getElementById('weatherDetailsTemplate');
-  const wind = template.content.querySelector('#weatherDetailsTemplate-wind');
-  const clouds = template.content.querySelector('#weatherDetailsTemplate-clouds');
-  const pressure = template.content.querySelector('#weatherDetailsTemplate-pressure');
-  const humidity = template.content.querySelector('#weatherDetailsTemplate-humidity');
-  const coordinates = template.content.querySelector('#weatherDetailsTemplate-coordinates');
+export const getWeatherDetailsTag = ({ weather, className}) => {
+  const id = 'weatherDetailsTemplate';
+  const template = document.getElementById(`${id}`);
+  const instance = document.importNode(template.content, true);
+  const wind = instance.querySelector(`#${id}-wind`);
+  const clouds = instance.querySelector(`#${id}-clouds`);
+  const pressure = instance.querySelector(`#${id}-pressure`);
+  const humidity = instance.querySelector(`#${id}-humidity`);
+  const coordinates = instance.querySelector(`#${id}-coordinates`);
 
   wind.textContent = `${weather.wind.speed} m/s`;
   clouds.textContent = `${weather.clouds.all} %`;
@@ -13,5 +15,6 @@ export const getWeatherDetailsTag = (weather) => {
   humidity.textContent = `${weather.main.humidity} %`;
   coordinates.textContent = `[${weather.coord.lat}, ${weather.coord.lon}]`;
 
-  return document.importNode(template.content, true);
+  instance.querySelector('#weatherDetails').classList.add(className);
+  return instance;
 };

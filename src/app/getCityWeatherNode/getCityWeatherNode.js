@@ -9,16 +9,18 @@ const Id = {
 export const getCityWeatherNode = (weather, type = CityTypes.saved) => {
   const id = Id[type];
   const template = document.getElementById(`${id}Template`);
-  const title = template.content.querySelector(`#${id}Title`);
-  const weatherIcon = template.content.querySelector(`#${id}WeatherIcon`);
-  const temperature = template.content.querySelector(`#${id}Temperature`);
+  const instance = document.importNode(template.content, true);
+  const title = instance.querySelector(`#${id}Title`);
+  const weatherIcon = instance.querySelector(`#${id}WeatherIcon`);
+  const temperature = instance.querySelector(`#${id}Temperature`);
 
   title.textContent = weather.name;
   weatherIcon.setAttribute('src', getWeatherIconUrl(weather.weather[0].icon));
   weatherIcon.setAttribute('alt', getWeatherIconUrl(weather.weather[0].main));
   temperature.textContent = `${weather.main.temp} °C`;
 
-  template.content.append(getWeatherDetailsTag(weather));
+  const node = instance.querySelector(`#${id}`);
+  node.append(getWeatherDetailsTag({ weather, className: CityTypes.current && 'Current-Details' }));
 
-  return document.importNode(template.content, true);
+  return instance;
 };

@@ -19,8 +19,7 @@
 <header>
   <div class="Container Header">
     <h1 class="Header-Title">Погода здесь</h1>
-    <button class="ChangeLocationButton">Обновить геолокацию</button>
-    <button class="ChangeLocationButton_mobile"></button>
+    <button class="ChangeLocationButton" id="changeLocationButton">Обновить геолокацию</button>
   </div>
 </header>
 <main>
@@ -73,7 +72,7 @@
 </main>
 
 <template id="weatherDetailsTemplate">
-  <ul class="WeatherDetails">
+  <ul class="WeatherDetails" id="weatherDetails">
     <li class="WeatherDetails-Item">
       <span class="WeatherDetails-ItemTitle">Ветер</span>
       <span class="WeatherDetails-ItemValue" id="weatherDetailsTemplate-wind"></span>
@@ -97,11 +96,11 @@
   </ul>
 </template>
 <template id="currentTemplate">
-  <section class="Current">
+  <section class="Current" id="current">
     <div class="Current-MainInfo">
       <h2 id="currentTitle" class="Current-Title"></h2>
       <div>
-        <img id="currentWeatherIcon" alt="weather" src='./moon.png' class="Current-WeatherIcon"/>
+        <img id="currentWeatherIcon" alt="" src="" class="Current-WeatherIcon"/>
         <span id="currentTemperature" class="Current-Temperature"></span>
       </div>
     </div>
@@ -109,12 +108,12 @@
   </section>
 </template>
 <template id="savedCityTemplate">
-  <li class="SavedCity Selected-ListItem">
+  <li class="SavedCity Selected-ListItem" id="savedCity">
     <div class="SavedCity-Header">
       <div class="SavedCity-HeaderInfo">
-        <h3 id="savedCityTitle" class="SavedCity-Title">Moscow</h3>
-        <span id="savedCityTemperature" class="SavedCity-Temperature">5°C</span>
-        <img id="savedCityWeatherIcon" alt="weather" src='./moon.png' class="SavedCity-WeatherIcon"/>
+        <h3 id="savedCityTitle" class="SavedCity-Title"></h3>
+        <span id="savedCityTemperature" class="SavedCity-Temperature"></span>
+        <img id="savedCityWeatherIcon" alt="" src="" class="SavedCity-WeatherIcon"/>
       </div>
       <button class="IconButton">×</button>
     </div>

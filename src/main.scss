@@ -23,22 +23,17 @@ $breakpoint: 700px;
   color:cadetblue;
   background-color: #c0e6e4;
   padding: 8px 30px;
-  &_mobile {
-    display: none;
+}
+@media (max-width: $breakpoint) {
+  .ChangeLocationButton {
+    font-size: 0;
+    padding: 0;
     background-color: #c0e6e4;
     background-image: url("./two-circular-arrows.png");
     background-size: cover;
     border-radius: 5px;
     width: 40px;
     height: 40px;
-  }
-}
-@media (max-width: $breakpoint) {
-  .ChangeLocationButton {
-    display: none;
-    &_mobile {
-      display: block;
-    }
   }
 }
 

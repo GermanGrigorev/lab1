@@ -6,20 +6,23 @@ import { openWeatherApi } from '../../api/openWeatherApi';
 const renderDefaultCurrentWeather = async () => {
   const currentWeather = await openWeatherApi.getWeatherByCityName(DEFAULT_CITY);
   const tag = getCityWeatherNode(currentWeather, CityTypes.current);
+  const current = document.getElementById("current");
+  if (current) current.remove();
   document.getElementById("container").prepend(tag);
 };
 
 export const renderCurrentWeather = async () => {
-  let currentWeather;
   setIsLoading(true);
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(async (position) => {
-      currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
+    await navigator.geolocation.getCurrentPosition(async (position) => {
+      const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
       const tag = getCityWeatherNode(currentWeather, CityTypes.current);
+      const current = document.getElementById("current");
+      if (current) current.remove();
       document.getElementById("container").prepend(tag);
     }, renderDefaultCurrentWeather);
   } else {
     await renderDefaultCurrentWeather();
   }
-  setIsLoading(false);
+  setTimeout(() => setIsLoading(false), 1000);
 };
