@@ -144,7 +144,7 @@ $breakpoint: 700px;
   }
 }
 
-.CityWeather {
+.SavedCity {
   margin-bottom: 20px;
   &-Header {
     display: flex;
@@ -174,7 +174,7 @@ $breakpoint: 700px;
 }
 
 @media (max-width: $breakpoint) {
-  .CityWeather{
+  .SavedCity{
     &-Header {
       margin-bottom: 15px;
     }

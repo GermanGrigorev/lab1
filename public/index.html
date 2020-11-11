@@ -8,11 +8,11 @@
       name="description"
       content="Web site created using create-react-app"
   />
-  <title>Lab 1</title>
+  <title>WEATHER</title>
 </head>
 <body>
 <div id="loader" class="Loader-Container Loader__hidden">
-  <div class="Loader-Logo" >
+  <div class="Loader-Logo">
     <img alt="logo" src='./sun.svg' class="Current-WeatherIcon"/>
   </div>
 </div>
@@ -24,17 +24,8 @@
   </div>
 </header>
 <main>
-  <div class="Container">
-    <section class="Current" id="current">
-      <div class="Current-MainInfo">
-        <h2 class="Current-Title">Saint Petersburg</h2>
-        <div>
-          <img alt="weather" src='./moon.png' class="Current-WeatherIcon"/>
-          <span class="Current-Temperature">8°C</span>
-        </div>
-      </div>
-<!--      <ul class="Current-Details WeatherDetails">-->
-    </section>
+  <div class="Container" id="container">
+    <!-- current -->
     <section class="Selected">
       <div class="Selected-Header">
         <h2 class="Selected-Title">Избранное</h2>
@@ -44,16 +35,16 @@
         </div>
       </div>
       <ul class="Selected-List">
-        <li class="CityWeather Selected-ListItem">
-          <div class="CityWeather-Header">
-            <div class="CityWeather-HeaderInfo">
-              <h3 class="CityWeather-Title">Moscow</h3>
-              <span class="CityWeather-Temperature">5°C</span>
-              <img alt="weather" src='./moon.png' class="CityWeather-WeatherIcon"/>
+        <li class="SavedCity Selected-ListItem">
+          <div class="SavedCity-Header">
+            <div class="SavedCity-HeaderInfo">
+              <h3 class="SavedCity-Title">Moscow</h3>
+              <span class="SavedCity-Temperature">5°C</span>
+              <img alt="weather" src='./moon.png' class="SavedCity-WeatherIcon"/>
             </div>
             <button class="IconButton">×</button>
           </div>
-          <ul class="CityWeather-Details WeatherDetails">
+          <ul class="SavedCity-Details WeatherDetails">
             <li class="WeatherDetails-Item">
               <span class="WeatherDetails-ItemTitle">Ветер</span>
               <span class="WeatherDetails-ItemValue">Moderate breeze, 6.0 m/s, North-northwest</span>
@@ -105,13 +96,25 @@
     </li>
   </ul>
 </template>
-<template id="selectedListItemTemplate">
-  <li class="CityWeather Selected-ListItem">
-    <div class="CityWeather-Header">
-      <div class="CityWeather-HeaderInfo">
-        <h3 class="CityWeather-Title">Moscow</h3>
-        <span class="CityWeather-Temperature">5°C</span>
-        <img alt="weather" src='./moon.png' class="CityWeather-WeatherIcon"/>
+<template id="currentTemplate">
+  <section class="Current">
+    <div class="Current-MainInfo">
+      <h2 id="currentTitle" class="Current-Title"></h2>
+      <div>
+        <img id="currentWeatherIcon" alt="weather" src='./moon.png' class="Current-WeatherIcon"/>
+        <span id="currentTemperature" class="Current-Temperature"></span>
+      </div>
+    </div>
+    <!--      <ul class="Current-Details WeatherDetails">-->
+  </section>
+</template>
+<template id="savedCityTemplate">
+  <li class="SavedCity Selected-ListItem">
+    <div class="SavedCity-Header">
+      <div class="SavedCity-HeaderInfo">
+        <h3 id="savedCityTitle" class="SavedCity-Title">Moscow</h3>
+        <span id="savedCityTemperature" class="SavedCity-Temperature">5°C</span>
+        <img id="savedCityWeatherIcon" alt="weather" src='./moon.png' class="SavedCity-WeatherIcon"/>
       </div>
       <button class="IconButton">×</button>
     </div>
