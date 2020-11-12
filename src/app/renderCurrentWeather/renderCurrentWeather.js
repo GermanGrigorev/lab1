@@ -17,7 +17,6 @@ const renderDefaultCurrentWeather = async () => {
 export const renderCurrentWeather = async () => {
   try {
     setIsLoading(true);
-    setError();
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(async (position) => {
         const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
