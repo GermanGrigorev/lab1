@@ -5,6 +5,7 @@ import {
 import { openWeatherApi } from '../../../api/openWeatherApi';
 import { getCityWeatherNode } from '../../getCityWeatherNode/getCityWeatherNode';
 import { deleteSelectedCity } from '../deleteSelectedCity/deleteSelectedCity';
+import { setError } from '../../error/error';
 
 export const addSelectedCity = async (cityName) => {
   const cities = getSelectedCitiesFromLocalStorage() || [];
@@ -14,6 +15,10 @@ export const addSelectedCity = async (cityName) => {
       saveSelectedCitiesToLocalStorage([...cities, weather.name]);
       const list = document.getElementById("SelectedList");
       list.append(getCityWeatherNode({ weather, onButtonClick: deleteSelectedCity }));
+    } else {
+      setError("Город с таким именем уже есть");
     }
+  } else {
+    setError("Город с таким именем уже есть");
   }
 };

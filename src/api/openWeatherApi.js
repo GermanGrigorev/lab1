@@ -1,5 +1,5 @@
 const APP_ID = '4f9daa6adb52684f45d6a42b2a313564';
-const BASE_URL = 'http://api.openweathermap.org/data/2.5/';
+const BASE_URL = 'https://api.openweathermap.org/data/2.5/';
 
 function url(path) {
   return `${BASE_URL}${path}&appid=${APP_ID}&units=metric&lang=ru`;
