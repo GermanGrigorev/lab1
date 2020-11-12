@@ -198,7 +198,7 @@ $breakpoint: 700px;
   }
 }
 
-.Loader-Container {
+.Loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -209,17 +209,29 @@ $breakpoint: 700px;
   width: 100%;
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.95);
+  &-Logo {
+    width: 135px;
+    height: 45px;
+    opacity: 1;
+    animation: logoInOut 2s infinite;
+  }
+  &_hidden {
+    display: none;
+  }
 }
 
-.Loader-Logo {
-  width: 135px;
-  height: 45px;
-  opacity: 1;
-  animation: logoInOut 2s infinite;
-}
+.Error {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1500;
+  background-color: orangered;
+  color: white;
+  padding: 20px 10px;
 
-.Loader__hidden {
-  display: none;
+  &_hidden {
+    display: none;
+  }
 }
 
 @keyframes logoInOut {

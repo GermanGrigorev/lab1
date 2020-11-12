@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c12a5b41-ccb7-447e-b9aa-2218fb837e3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/selectedCities/addSelectedCity/addSelectedCity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/selectedCities/deleteSelectedCity/deleteSelectedCity.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/selectedCities/renderSelectedCities/renderSelectedCities.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/currentCity.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/selectedCities.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/error/error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/getCityWeatherNode/getCityWeatherNode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/getCityWeatherNode/getCityWeatherNode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/getCityWeatherNode/getWeatherDetailsNode/getWeatherDetailsNode.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/getCityWeatherNode/getWeatherDetailsNode/getWeatherDetailsNode.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/loader/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loader/loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/renderCurrentWeather/renderCurrentWeather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/renderCurrentWeather/renderCurrentWeather.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/selectedCities/renderSelectedCities/renderSelectedCities.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/selectedCities/renderSelectedCities/renderSelectedCities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/app.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/cityWeather.model.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +120,7 @@
       <workItem from="1604992911545" duration="3207000" />
       <workItem from="1605083043186" duration="14000" />
       <workItem from="1605087388523" duration="4387000" />
+      <workItem from="1605159305337" duration="890000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1602191406471</created>
@@ -177,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604845842014</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add deleting">
+      <created>1605127250054</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605127250054</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -204,17 +205,18 @@
     <MESSAGE value="Fixes" />
     <MESSAGE value="Create weatherDetails template" />
     <MESSAGE value="Renaming" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renaming" />
+    <MESSAGE value="Add deleting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add deleting" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602339297458">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602339297458" />
-    <state x="219" y="0" key="CommitChangelistDialog2" timestamp="1605127243485">
+    <state x="219" y="0" key="CommitChangelistDialog2" timestamp="1605127249399">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="219" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605127243485" />
+    <state x="219" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605127249399" />
     <state x="122" y="56" key="DiffContextDialog" timestamp="1602749657982">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -223,6 +225,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="273" y="114" key="EditFileWatcherDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602337934769" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.bottom" timestamp="1605159987382">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="-12" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605159987382" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.center" timestamp="1605159987382">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="-12" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605159987382" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.left" timestamp="1605159987382">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="-12" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605159987382" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.right" timestamp="1605159987382">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="-12" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605159987382" />
     <state x="157" y="0" key="SettingsEditor" timestamp="1604837357553">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -231,10 +249,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338775727" />
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1604845848047">
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1605127253892">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1604845848047" />
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605127253892" />
     <state x="423" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602749791284">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

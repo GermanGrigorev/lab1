@@ -3,6 +3,7 @@ import { getCityWeatherNode } from '../getCityWeatherNode/getCityWeatherNode';
 import { setIsLoading } from '../loader/loader';
 import { openWeatherApi } from '../../api/openWeatherApi';
 import { CityTypes } from '../../models/cityWeather.model';
+import { setError } from '../error/error';
 
 const renderDefaultCurrentWeather = async () => {
   const currentWeather = await openWeatherApi.getWeatherByCityName(DEFAULT_CITY);
@@ -14,20 +15,26 @@ const renderDefaultCurrentWeather = async () => {
 };
 
 export const renderCurrentWeather = async () => {
-  setIsLoading(true);
-  if (navigator.geolocation) {
-    await navigator.geolocation.getCurrentPosition(async (position) => {
-      const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
-      const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
-      const container = document.getElementById("container");
-      const current = container.querySelector(".Current");
-      if (current) {
-        current.remove();
-      }
-      container.prepend(tag);
-    }, renderDefaultCurrentWeather);
-  } else {
-    await renderDefaultCurrentWeather();
+  try {
+    setIsLoading(true);
+    setError();
+    if (navigator.geolocation) {
+      await navigator.geolocation.getCurrentPosition(async (position) => {
+        const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
+        const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
+        const container = document.getElementById("container");
+        const current = container.querySelector(".Current");
+        if (current) {
+          current.remove();
+        }
+        container.prepend(tag);
+      }, renderDefaultCurrentWeather);
+    } else {
+      await renderDefaultCurrentWeather();
+    }
+    setTimeout(() => setIsLoading(false), 1000);
+  } catch (e) {
+    setIsLoading(false);
+    setError();
   }
-  setTimeout(() => setIsLoading(false), 1000);
 };

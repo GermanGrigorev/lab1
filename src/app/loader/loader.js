@@ -8,9 +8,9 @@ export const setIsLoading = (flag) => {
     LOADER_COUNT = LOADER_COUNT && LOADER_COUNT - 1;
   }
   if (LOADER_COUNT === 0) {
-    loader.classList.add('Loader__hidden');
+    loader.classList.add('Loader_hidden');
   }
   if (LOADER_COUNT === 1) {
-    loader.classList.remove('Loader__hidden');
+    loader.classList.remove('Loader_hidden');
   }
 };
