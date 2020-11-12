@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":[],"mappings":"sIAAA,uB","file":"static/js/main.d6bb5618.chunk.js","sourcesContent":["import './index.css';\nimport './resetDefaultStyles.css';\nimport './main.scss'\n"],"sourceRoot":""}
