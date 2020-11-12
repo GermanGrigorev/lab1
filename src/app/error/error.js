@@ -1,4 +1,4 @@
-export const setError = (message = "Something went wrong") => {
+export const setError = (message = "Что-то пошло не так") => {
   const error = document.getElementById('error');
   error.textContent = message;
   error.classList.remove('Error_hidden');

@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c12a5b41-ccb7-447e-b9aa-2218fb837e3c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/openWeatherApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/openWeatherApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/error/error.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/error/error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/renderCurrentWeather/renderCurrentWeather.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/renderCurrentWeather/renderCurrentWeather.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/selectedCities/addSelectedCity/addSelectedCity.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/selectedCities/addSelectedCity/addSelectedCity.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scss" afterDir="false" />
     </list>
@@ -117,7 +119,7 @@
       <workItem from="1604992911545" duration="3207000" />
       <workItem from="1605083043186" duration="14000" />
       <workItem from="1605087388523" duration="4387000" />
-      <workItem from="1605159305337" duration="1296000" />
+      <workItem from="1605159305337" duration="2808000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1602191406471</created>
@@ -189,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605160239143</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="redesign errors">
+      <created>1605160625789</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605160625789</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,17 +228,18 @@
     <MESSAGE value="Add deleting" />
     <MESSAGE value="Add errors catching" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="redesign errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="redesign errors" />
   </component>
   <component name="WindowStateProjectService">
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602339297458">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="371" y="89" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602339297458" />
-    <state x="219" y="0" key="CommitChangelistDialog2" timestamp="1605160238614">
+    <state x="219" y="0" key="CommitChangelistDialog2" timestamp="1605160625241">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="219" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160238614" />
+    <state x="219" y="0" key="CommitChangelistDialog2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160625241" />
     <state x="122" y="56" key="DiffContextDialog" timestamp="1602749657982">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -238,22 +248,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="273" y="114" key="EditFileWatcherDialog/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602337934769" />
-    <state width="1237" height="245" key="GridCell.Tab.0.bottom" timestamp="1605160386448">
+    <state width="1237" height="-12" key="GridCell.Tab.0.bottom" timestamp="1605165617477">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="245" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160386448" />
-    <state width="1237" height="245" key="GridCell.Tab.0.center" timestamp="1605160386448">
+    <state width="1237" height="-12" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605165617477" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.center" timestamp="1605165617477">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="245" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160386448" />
-    <state width="1237" height="245" key="GridCell.Tab.0.left" timestamp="1605160386448">
+    <state width="1237" height="-12" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605165617477" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.left" timestamp="1605165617477">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="245" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160386448" />
-    <state width="1237" height="245" key="GridCell.Tab.0.right" timestamp="1605160386448">
+    <state width="1237" height="-12" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605165617477" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.right" timestamp="1605165617477">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="245" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160386448" />
+    <state width="1237" height="-12" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605165617477" />
     <state x="157" y="0" key="SettingsEditor" timestamp="1604837357553">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -262,14 +272,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602338775727" />
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1605160243721">
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2" timestamp="1605160630548">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160243721" />
-    <state x="423" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1602749791284">
+    <state x="233" y="71" key="Vcs.Push.Dialog.v2/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160630548" />
+    <state x="423" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1605160898681">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="423" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1602749791284" />
+    <state x="423" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.680/1920.0.1280.680@0.0.1280.680" timestamp="1605160898681" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1602343600815">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

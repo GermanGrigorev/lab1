@@ -7,9 +7,9 @@ import { setError } from '../error/error';
 
 const renderDefaultCurrentWeather = async () => {
   const currentWeather = await openWeatherApi.getWeatherByCityName(DEFAULT_CITY);
-  const tag = getCityWeatherNode({weather: currentWeather, type: CityTypes.current});
-  const container = document.getElementById("container");
-  const current = container.querySelector(".Current");
+  const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
+  const container = document.getElementById('container');
+  const current = container.querySelector('.Current');
   if (current) current.remove();
   container.prepend(tag);
 };
@@ -19,14 +19,18 @@ export const renderCurrentWeather = async () => {
     setIsLoading(true);
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(async (position) => {
-        const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
-        const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
-        const container = document.getElementById("container");
-        const current = container.querySelector(".Current");
-        if (current) {
-          current.remove();
+        try {
+          const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
+          const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
+          const container = document.getElementById('container');
+          const current = container.querySelector('.Current');
+          if (current) {
+            current.remove();
+          }
+          container.prepend(tag);
+        } catch (e) {
+          setError();
         }
-        container.prepend(tag);
       }, renderDefaultCurrentWeather);
     } else {
       await renderDefaultCurrentWeather();
