@@ -1,9 +1,9 @@
 import { getSelectedCitiesFromLocalStorage } from '../../../models/selectedCities.model';
 import { getCityWeatherNode } from '../../getCityWeatherNode/getCityWeatherNode';
-import { openWeatherApi } from '../../../api/openWeatherApi';
 import { setIsLoading } from '../../loader/loader';
 import { deleteSelectedCity } from '../deleteSelectedCity/deleteSelectedCity';
 import { setError } from '../../error/error';
+import { serverApi } from '../../../api/serverApi';
 
 export const renderSelectedCities = async () => {
   try {
@@ -12,8 +12,12 @@ export const renderSelectedCities = async () => {
     const list = document.getElementById("SelectedList");
     list.querySelectorAll('.SavedCity').forEach((node) => node.remove());
     await cities.forEach(async (name) => {
-      const weather = await openWeatherApi.getWeatherByCityName(name);
-      list.append(getCityWeatherNode({ weather, onButtonClick: deleteSelectedCity }));
+      try {
+        const weather = await serverApi.getWeatherByCityName(name);
+        list.append(getCityWeatherNode({ weather, onButtonClick: deleteSelectedCity }));
+      } catch (e) {
+        setError();
+      }
     });
     setIsLoading(false);
   } catch (e) {

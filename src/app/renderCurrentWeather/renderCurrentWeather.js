@@ -1,12 +1,12 @@
 import { DEFAULT_CITY } from '../../models/currentCity.model';
 import { getCityWeatherNode } from '../getCityWeatherNode/getCityWeatherNode';
 import { setIsLoading } from '../loader/loader';
-import { openWeatherApi } from '../../api/openWeatherApi';
 import { CityTypes } from '../../models/cityWeather.model';
 import { setError } from '../error/error';
+import { serverApi } from '../../api/serverApi';
 
 const renderDefaultCurrentWeather = async () => {
-  const currentWeather = await openWeatherApi.getWeatherByCityName(DEFAULT_CITY);
+  const currentWeather = await serverApi.getWeatherByCityName(DEFAULT_CITY);
   const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
   const container = document.getElementById('container');
   const current = container.querySelector('.Current');
@@ -20,7 +20,7 @@ export const renderCurrentWeather = async () => {
     if (navigator.geolocation) {
       await navigator.geolocation.getCurrentPosition(async (position) => {
         try {
-          const currentWeather = await openWeatherApi.getWeatherByCoordinates(position.coords);
+          const currentWeather = await serverApi.getWeatherByCoordinates(position.coords);
           const tag = getCityWeatherNode({ weather: currentWeather, type: CityTypes.current });
           const container = document.getElementById('container');
           const current = container.querySelector('.Current');
