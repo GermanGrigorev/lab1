@@ -1,12 +1,10 @@
-import {
-  getSelectedCitiesFromLocalStorage,
-  saveSelectedCitiesToLocalStorage
-} from '../../../models/selectedCities.model';
+import { serverApi } from '../../../api/serverApi';
 
 export const deleteSelectedCity = async (cityName) => {
-  const cities = getSelectedCitiesFromLocalStorage() || [];
-  if (cities.includes(cityName)) {
-    saveSelectedCitiesToLocalStorage(cities.filter(city => city !== cityName));
+  const cities = await serverApi.getFavourites();
+
+  if (cities.find(({name}) => name === cityName)) {
+    await serverApi.deleteFavourites(cityName);
     const ul = document.getElementById("SelectedList");
     const list = ul.querySelectorAll('.SavedCity');
 
