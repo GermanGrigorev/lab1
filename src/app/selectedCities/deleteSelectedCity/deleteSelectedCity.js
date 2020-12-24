@@ -1,6 +1,8 @@
 import { serverApi } from '../../../api/serverApi';
+import { setIsLoading } from '../../loader/loader';
 
 export const deleteSelectedCity = async (cityName) => {
+  setIsLoading(true);
   const cities = await serverApi.getFavourites();
 
   if (cities.find(({name}) => name === cityName)) {
@@ -15,4 +17,5 @@ export const deleteSelectedCity = async (cityName) => {
     });
     cityNode.remove();
   }
+  setIsLoading(false);
 };
